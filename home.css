@@ -1,0 +1,15 @@
+/* CSS for Text Shadows */
+.text-shadow-lg {
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6); /* เงาเข้มและใหญ่ขึ้น */
+  }
+  
+  .text-shadow-md {
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5); /* เงาเล็กลงสำหรับข้อความขนาดเล็ก */
+  }
+ /* Scroll Up Button */
+#scrollUpBtn {
+    display: none; /*  จะซ่อนไว้เริ่มต้น */
+    z-index: 100; /* ทำให้ปุ่มอยู่ข้างบน */
+    font-size: 16px; /* ปรับขนาดไอคอน */
+  }
+  

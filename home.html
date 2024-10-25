@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บริษัทของคุณ - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="home.css">
+  <style>
+    /* กำหนดสไตล์สำหรับอนิเมชัน fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* เงาข้อความสำหรับส่วน Hero */
+    .text-shadow-lg {
+      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+    }
+    .text-shadow-md {
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* กำหนดสไตล์ Navbar */
+    .navbar {
+      position: relative;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <!-- ส่วน Navigation (Navbar) -->
+  <header class="navbar bg-blue-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-3xl font-bold">บริษัทของคุณ</h1>
+      <nav>
+        <a href="#about" class="px-4 hover:bg-blue-700 rounded-lg">เกี่ยวกับเรา</a>
+        <a href="#portfolio" class="px-4 hover:bg-blue-700 rounded-lg">ผลงาน</a>
+        <a href="#contact" class="px-4 hover:bg-blue-700 rounded-lg">ติดต่อเรา</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ส่วน Hero -->
+  <section class="hero relative h-96 flex items-center justify-center text-white bg-blue-800">
+    <div class="absolute inset-0 bg-cover bg-center blur-image" style="background-image: url('./images.webp'); filter: blur(8px);"></div>
+    <div class="relative text-center fade-in" style="z-index: 10;">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">เราคือผู้เชี่ยวชาญด้าน...</h2>
+      <p class="text-lg text-shadow-md">พร้อมให้บริการด้วยคุณภาพและความตั้งใจ</p>
+    </div>
+  </section>
+
+  <!-- ส่วนเกี่ยวกับเรา -->
+  <section id="about" class="py-12 bg-white">
+    <div class="container mx-auto px-6 fade-in">
+      <h3 class="text-3xl font-bold text-center mb-6">เกี่ยวกับเรา</h3>
+      <p class="text-lg text-gray-700 leading-relaxed text-center">
+        บริษัทของเรามุ่งมั่นในการให้บริการที่ดีที่สุดเพื่อตอบโจทย์ทุกความต้องการของลูกค้า 
+        ด้วยประสบการณ์มากกว่า 10 ปี เราพร้อมให้บริการในด้าน...
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed text-center mt-4">
+        บริษัทของเราเชื่อในค่านิยมของการทำงานด้วยความซื่อสัตย์และรับผิดชอบ
+        พร้อมที่จะสร้างความไว้วางใจให้กับลูกค้าทุกท่าน
+      </p>
+    </div>
+  </section>
+  
+  <!-- ส่วนผลงาน -->
+  <section id="portfolio" class="py-12 bg-gray-200">
+    <div class="container mx-auto px-6 fade-in">
+      <h3 class="text-3xl font-bold text-center mb-8">ผลงานของเรา</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition-all duration-300">
+          <img src="./images.webp" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="text-xl font-semibold mb-2">โปรเจกต์ที่ 1</h4>
+            <p class="text-gray-600">รายละเอียดสั้นๆ เกี่ยวกับโปรเจกต์</p>
+          </div>
+        </div>
+        <!-- เพิ่มโปรเจกต์เพิ่มเติมได้ในลักษณะเดียวกัน -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ส่วนติดต่อเรา -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto px-6 fade-in">
+      <h3 class="text-3xl font-bold text-center mb-6">ติดต่อเรา</h3>
+      <div class="flex flex-col md:flex-row justify-center">
+        <form class="bg-gray-100 p-8 rounded-lg shadow-md w-full md:w-1/2">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">ชื่อ</label>
+            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="ชื่อของคุณ">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">อีเมล</label>
+            <input type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="อีเมลของคุณ">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">ข้อความ</label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="ข้อความของคุณ"></textarea>
+          </div>
+          <button class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">ส่งข้อความ</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ปุ่มเลื่อนขึ้น -->
+  <button id="scrollUpBtn" class="fixed bottom-4 right-4 bg-blue-800 text-white p-3 rounded-lg shadow-lg hover:bg-blue-700 transition-opacity duration-300 opacity-0 cursor-pointer" style="display: none;">
+    <i class="fas fa-arrow-up"></i> <!-- ไอคอนลูกศรขึ้น -->
+  </button>
+
+  <!-- ส่วน Footer -->
+  <footer class="bg-blue-800 text-white text-center py-4">
+    <p>&copy; 2024 บริษัทของคุณ. สงวนลิขสิทธิ์.</p>
+  </footer>
+
+  <script>
+    // ดึงปุ่มเลื่อนขึ้น
+    const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+    // แสดงหรือซ่อนปุ่มเลื่อนขึ้น
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollUpBtn.style.display = "block";
+        scrollUpBtn.style.opacity = "1"; // ทำให้ปุ่มเลื่อนขึ้นค่อยๆ ปรากฏ
+      } else {
+        scrollUpBtn.style.display = "none";
+        scrollUpBtn.style.opacity = "0"; // ทำให้ปุ่มเลื่อนขึ้นค่อยๆ หายไป
+      }
+    };
+
+    // เลื่อนขึ้นไปที่ด้านบนเมื่อคลิกปุ่ม
+    scrollUpBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // การเลื่อนแบบเรียบสำหรับลิงค์ใน Navigation
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // ป้องกันพฤติกรรมการคลิกลิงค์ปกติ
+        const targetId = this.getAttribute('href'); // ดึง ID ของเป้าหมาย
+        const targetSection = document.querySelector(targetId); // หาเป้าหมายที่เป็นส่วน
+        targetSection.scrollIntoView({ behavior: 'smooth' }); // เลื่อนอย่างเรียบไปที่เป้าหมาย
+      });
+    });
+
+    // อนิเมชันเมื่อเลื่อน
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const options = {
+      threshold: 0.1 // ปรับค่าที่นี่เพื่อควบคุมว่าเมื่อไหร่การอนิเมชันจะทำงาน
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // หยุดการสังเกตเมื่อแสดงผล
+        }
+      });
+    }, options);
+
+    fadeInElements.forEach(el => {
+      observer.observe(el); // สังเกต element สำหรับการอนิเมชัน
+    });
+  </script>
+</body>
+</html>
